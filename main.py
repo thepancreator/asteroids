@@ -13,6 +13,8 @@ def main():
 
     clock = pygame.time.Clock()
     dt = 0.0
+
+
     while True:
         log_state()
         for event in pygame.event.get():
@@ -21,6 +23,7 @@ def main():
         screen.fill("black")
 
         player.draw(screen)
+        player.update(dt)
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000
